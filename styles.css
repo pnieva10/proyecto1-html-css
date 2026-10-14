@@ -1,0 +1,103 @@
+/* ===== RESET ===== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIABLES ===== */
+:root {
+  --color-principal: #1e3a5f;
+  --color-fondo: #ffffff;
+  --color-texto: #333333;
+  --fuente: Arial, sans-serif;
+  --espacio: 20px;
+}
+
+/* ===== GENERAL ===== */
+body {
+  font-family: var(--fuente);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+section {
+  padding: var(--espacio);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--espacio);
+  background-color: var(--color-principal);
+  color: var(--color-fondo);
+}
+
+/* ===== NAVEGACIÓN ===== */
+nav ul {
+  display: flex;
+  gap: var(--espacio);
+  list-style: none;
+}
+
+nav a {
+  color: var(--color-fondo);
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 60px var(--espacio);
+}
+
+/* ===== PORTAFOLIO ===== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--espacio);
+}
+
+/* ===== CONTACTO ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding: var(--espacio);
+  text-align: center;
+  background-color: var(--color-principal);
+  color: var(--color-fondo);
+}
+
+footer a {
+  color: var(--color-fondo);
+}
+
+/* ===== RESPONSIVE ===== */
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móvil */
+@media screen and (max-width: 640px) {
+  header {
+    flex-direction: column;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+}
